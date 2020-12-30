@@ -3,7 +3,7 @@ From: ubuntu:latest
 
 %post
     apt update -y
-    apt install default-jre
+    apt install default-jre -y
     mkdir /app
     cd /app
     wget https://launcher.mojang.com/v1/objects/35139deedbd5182953cf1caa23835da59ca3d7cd/server.jar
