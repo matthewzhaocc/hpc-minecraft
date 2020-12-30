@@ -1,0 +1,16 @@
+Bootstrap: docker
+From: ubuntu:latest
+
+%post
+    apt update -y
+    apt install default-jre
+    mkdir /app
+    cd /app
+    wget https://launcher.mojang.com/v1/objects/35139deedbd5182953cf1caa23835da59ca3d7cd/server.jar
+    cat "eula=true" eula.txt
+
+%environment
+    export LC_ALL=C
+
+%runscript
+    /usr/bin/java -Xmx1G -jar /minecraft/server.jar
