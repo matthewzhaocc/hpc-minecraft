@@ -14,4 +14,4 @@ From: ubuntu:latest
     export LC_ALL=C
 
 %runscript
-    /usr/bin/java -Xmx1G -jar /minecraft/server.jar
+    cd /app && /usr/bin/java -Xmx1G -jar server.jar
